@@ -173,3 +173,23 @@ async function showData2() {
 showData2();
 
 ///////////////////////////////////////////////////////////////////////////////////////
+
+function getData3(){
+    return new Promise(function(resolve,reject){
+        reject("Something went wrong");
+    });
+}
+
+async function showData3(){
+
+    try{
+        let result= await getData3();
+        console.log(result);
+    }catch(error){
+        console.log(error);
+    }
+}
+
+showData3();
+
+////////////////////////////////////////////////////////////////////
